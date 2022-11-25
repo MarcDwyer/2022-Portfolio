@@ -1,6 +1,6 @@
 export function Navbar() {
   return (
-    <nav>
+    <nav className="w-16 h-screen" style={{ border: "1px solid blue" }}>
       navbar
     </nav>
   );
