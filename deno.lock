@@ -111,6 +111,9 @@
     "https://esm.sh/stable/preact@10.11.0/deno/preact.js": "071b515099e5dff2fe56768be62644e32fab702b194171357ccc4d7d1210144a",
     "https://esm.sh/twind@0.16.17": "18d47be2022b148a89572378cf12a6e9b2fed041a0b11129c64af1b4186af0a2",
     "https://esm.sh/twind@0.16.17/sheets": "9da51c2715b8f78e3fc8cbc89183d10ca64e31d95f1fcacc333236c190454103",
+    "https://esm.sh/twind@0.16.18": "ef465a169254d861c015755b11cd421b5317266ef99dce9c873472f25950847c",
+    "https://esm.sh/twind@0.16.18/colors": "aff4ff74397fda2b1f0ad365520c209b8a9724cc4dbf98fb4a6a679f7a4d84a4",
+    "https://esm.sh/twind@0.16.18/sheets": "825f6a9c6271cc78a4220088a79e3f1207d7ccfd6f54669a572b6624f6c1cbe2",
     "https://esm.sh/v99/csstype@3.1.1/index.d.ts": "1c29793071152b207c01ea1954e343be9a44d85234447b2b236acae9e709a383",
     "https://esm.sh/v99/preact-render-to-string@5.2.4/X-ZS8q/deno/preact-render-to-string.js": "75aad97b00d5ad63383de7f729a3f1fea59e69a9b876db5551d9c746ed372f82",
     "https://esm.sh/v99/preact-render-to-string@5.2.4/X-ZS8q/src/index.d.ts": "b1d73703252c8570fdf2952475805f5808ba3511fefbd93a3e7bd8406de7dcd0",
@@ -122,6 +125,12 @@
     "https://esm.sh/v99/twind@0.16.17/deno/sheets.js": "f75586c3a778278f99ca9e6761e8c8a2089c66d6a503bb25e3bba38597fe1e30",
     "https://esm.sh/v99/twind@0.16.17/deno/twind.js": "8fec4504ce1bb9a4876b4420826e6c3c49e68493f2723483aad09ea240aa0850",
     "https://esm.sh/v99/twind@0.16.17/sheets/sheets.d.ts": "795aa19124fe8a61cf0f3833aac4d30c63273ca049bd91f010565c9e1c9225a3",
-    "https://esm.sh/v99/twind@0.16.17/twind.d.ts": "168e8aeafcf13cfa02fbdd6fd2c1cc374784af6ddbf3c0e07db0b4199c4bf5f6"
+    "https://esm.sh/v99/twind@0.16.17/twind.d.ts": "168e8aeafcf13cfa02fbdd6fd2c1cc374784af6ddbf3c0e07db0b4199c4bf5f6",
+    "https://esm.sh/v99/twind@0.16.18/colors/colors.d.ts": "5d718e9e958b108054073182c3a6b3a8c8352b4c9b2c520a15bdb56bac56868f",
+    "https://esm.sh/v99/twind@0.16.18/deno/colors.js": "13d2f40dc00ead0e85a15a79c68648cc39979f4393743fcb982f8a3b1d45c341",
+    "https://esm.sh/v99/twind@0.16.18/deno/sheets.js": "cafed233330ed0755b6c3faae1a917588aa5ec0831e2f136a9f001985424dca1",
+    "https://esm.sh/v99/twind@0.16.18/deno/twind.js": "4db2740adfca37cae56b932de94305d0bc051c9a29237776f9edce73e0fdf49d",
+    "https://esm.sh/v99/twind@0.16.18/sheets/sheets.d.ts": "e480df0d0e33cde83f642ddde512745cbca1c3659f17bb913d9be7007be066e8",
+    "https://esm.sh/v99/twind@0.16.18/twind.d.ts": "168e8aeafcf13cfa02fbdd6fd2c1cc374784af6ddbf3c0e07db0b4199c4bf5f6"
   }
 }
