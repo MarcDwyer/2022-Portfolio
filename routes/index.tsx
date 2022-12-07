@@ -1,11 +1,11 @@
-import { Navbar } from "../components/Navbar.tsx";
+import { MainContainer } from "../components/MainContainer.tsx";
 
 export default function Home() {
   return (
     <div id="main-content">
-      <div className="w-screen h-screen flex font-sans">
-        <Navbar />
-      </div>
+      <MainContainer path="/">
+        <div className="bg-gray-800 w-full h-full">hello world</div>
+      </MainContainer>
     </div>
   );
 }
