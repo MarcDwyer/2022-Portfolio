@@ -6,6 +6,10 @@ export interface ProjectsType {
   links?: Links[];
   stack: string;
   hosted?: string;
+  dimensions?: {
+    width: string;
+    height: string;
+  };
 }
 
 export interface Links {
@@ -168,13 +172,7 @@ const Fitbit: ProjectWithDimensions = {
     height: "275px",
   },
 };
-export interface ProjectWithDimensions extends ProjectsType {
-  dimensions: {
-    width: string;
-    height: string;
-  };
-}
-const ProjectData: Array<ProjectsType | ProjectWithDimensions> = [
+const ProjectData: Array<ProjectsType> = [
   Fitbit,
   TMI,
   OkChat,

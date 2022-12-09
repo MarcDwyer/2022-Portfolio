@@ -22,14 +22,14 @@ export default function Navbar({ path }: Props) {
     },
   ];
   return (
-    <nav className={`flex-none w-96 flex bg-gray-900 text-gray-200`}>
+    <nav className={`flex-none w-96 flex bg-nav`}>
       <div className="flex flex-col m-auto">
         <div className=" m-auto flex flex-wrap">
           <img
             src="https://i.imgur.com/F4iPL1v.png"
             className=" h-32 w-32 rounded-full ml-auto mb-auto mt-5 mr-5 border-4 border-gray-600"
           />
-          <div className="opacity-75 m-auto flex flex-col">
+          <div className="m-auto flex flex-col">
             <h1 className="m-auto font-bold text-2xl">Marc Dwyer</h1>
             <h4 className="m-auto font-bold">Front End Engineer</h4>
             <h4 className="m-auto font-bold">US/EU Citizenship</h4>
