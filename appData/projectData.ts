@@ -146,7 +146,7 @@ const OkChat: ProjectsType = {
   hosted: "Github",
 };
 
-const Fitbit: ProjectWithDimensions = {
+const Fitbit: ProjectsType = {
   id: 12312,
   title: "Fitbit Clockfaces",
   details:

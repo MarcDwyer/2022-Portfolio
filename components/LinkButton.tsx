@@ -10,6 +10,7 @@ export function LinkButton({ children, linkTo }: Props) {
     <a
       className="border-1 border-gray-300 p-3 mr-3"
       href={linkTo}
+      target="_blank"
     >
       {children}
     </a>
