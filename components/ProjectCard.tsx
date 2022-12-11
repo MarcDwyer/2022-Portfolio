@@ -11,13 +11,13 @@ export function ProjectCard({ project, isOdd }: Props) {
     <div className="flex w-11/12 ml-auto mr-auto border-b-1">
       <div className="mt-10 mb-10 ml-auto mr-auto flex flex-wrap">
         <img
-          style={project.dimensions ?? { width: "450px", height: "350px" }}
+          style={project.dimensions ?? { height: "350px", width: "550px" }}
           className={`${
-            isOdd ? "lg:order-first" : "lg:order-last"
-          } m-auto sm:order-first`}
+            isOdd ? "xl:order-first" : "xl:order-last"
+          } m-auto lg:order-first`}
           src={project.url}
         />
-        <div className="flex-col flex w-3/6">
+        <div className="flex-col flex w-3/6 m-auto lg:w-full">
           <h3 className="font-bold text-2xl">
             {`${project.title} -- hosted on ${
               project.hosted ?? "the Internet"

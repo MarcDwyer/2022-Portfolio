@@ -8,7 +8,7 @@ type Props = {
 
 export function MainContainer({ path, children }: Props) {
   return (
-    <div className="flex flex-nowrap font-mySans h-screen text-textColor bg-myBackground">
+    <div className="flex flex-col font-mySans h-screen text-textColor bg-myBackground">
       <Navbar path={path} />
       {children}
     </div>
