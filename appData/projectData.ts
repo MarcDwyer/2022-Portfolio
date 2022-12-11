@@ -10,6 +10,8 @@ export interface ProjectsType {
     width: string;
     height: string;
   };
+  repo?: string;
+  link?: string;
 }
 
 export interface Links {
@@ -26,10 +28,10 @@ const gopoll: ProjectsType = {
   url: "https://i.imgur.com/0SGMtnu.png",
   links: [
     // { title: "Live Demo", link: "https://gopoll.marcdwyer.dev/" },
-    { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" },
   ],
   stack: "React, Go and MongoDB",
   hosted: "DigitalOcean",
+  repo: "https://github.com/MarcDwyer/GoPoll",
 };
 
 const nsa: ProjectsType = {
@@ -45,12 +47,9 @@ const nsa: ProjectsType = {
       link:
         "https://chrome.google.com/webstore/detail/netflix-stop-autoplay/fbcmkdogjehincilpicohipinoobijem",
     },
-    {
-      title: "Repository",
-      link: "https://github.com/MarcDwyer/netflix-stop-autoplay",
-    },
   ],
   stack: "TypeScript",
+  repo: "https://github.com/MarcDwyer/netflix-stop-autoplay",
 };
 
 const tf: ProjectsType = {
@@ -64,12 +63,9 @@ const tf: ProjectsType = {
     //   title: "Live Demo",
     //   link: "https://twitch-followers.marcdwyer.dev/",
     // },
-    {
-      title: "Repository",
-      link: "https://github.com/MarcDwyer/twitch-followers",
-    },
   ],
   stack: "React and Deno",
+  repo: "https://github.com/MarcDwyer/twitch-followers",
 };
 const hc: ProjectsType = {
   id: 0,
@@ -79,13 +75,10 @@ const hc: ProjectsType = {
   url:
     "https://github.com/MarcDwyer/hue-desktop-controller/raw/master/icons/hue1.png",
   links: [
-    {
-      title: "Repository",
-      link: "https://github.com/MarcDwyer/electron-hue-controller",
-    },
     { title: "View Website", link: "https://hue-controller.netlify.com/" },
   ],
   stack: "React and Electron",
+  repo: "https://github.com/MarcDwyer/electron-hue-controller",
 };
 
 const td: ProjectsType = {
@@ -96,13 +89,10 @@ const td: ProjectsType = {
   url: "https://imgur.com/PNX97H4.png",
   links: [
     // { title: "Live Demo", link: "https://discover.marcdwyer.dev" },
-    {
-      title: "Repository",
-      link: "https://github.com/MarcDwyer/twitch-discovery",
-    },
   ],
   stack: "React and NodeJS",
   hosted: "DigitalOcean",
+  repo: "https://github.com/MarcDwyer/twitch-discovery",
 };
 
 const typer: ProjectsType = {
@@ -113,13 +103,10 @@ const typer: ProjectsType = {
   url: "https://i.imgur.com/kwt6Ej0.png",
   links: [
     // { title: "Live Demo", link: "https://typer.marcdwyer.dev/" },
-    {
-      title: "Repository",
-      link: "https://github.com/MarcDwyer/arcade-typeracer",
-    },
   ],
   stack: "React, TypeScript and Deno",
   hosted: "DigitalOcean",
+  repo: "https://github.com/MarcDwyer/arcade-typeracer",
 };
 const TMI: ProjectsType = {
   id: 10001,
@@ -130,6 +117,7 @@ const TMI: ProjectsType = {
   links: [{ title: "deno.land", link: "https://deno.land/x/tmi" }],
   stack: "TypeScript",
   hosted: "deno.land",
+  repo: "https://github.com/MarcDwyer/tmi.ts",
 };
 
 const OkChat: ProjectsType = {
@@ -139,11 +127,10 @@ const OkChat: ProjectsType = {
     "Ok-Chat is a Desktop application that allows users to join Twitch streamer’s IRC channels. Ok-Chat includes a plethora of features such as user search prediction, color coded messages, efficient memory management, easy to use UI, followed streams tracker and the use of 3rd party emotes like BTTV. It’s important to note that this software is very early in the development process and some of these features may be buggy or not exist yet, but trust me, they will come.",
   url:
     "https://camo.githubusercontent.com/ab1ecbf1579fa62974b4c73ea1df4b0fdb3575331c4ca05e1d204007df15dba4/68747470733a2f2f692e696d6775722e636f6d2f485759387235712e706e67",
-  links: [
-    { title: "Repository", link: "https://github.com/MarcDwyer/Ok-Chat" },
-  ],
+  links: [],
   stack: "TypeScript, React and Electron",
   hosted: "Github",
+  repo: "https://github.com/MarcDwyer/Ok-Chat",
 };
 
 const Fitbit: ProjectsType = {
@@ -171,6 +158,9 @@ const Fitbit: ProjectsType = {
     width: "275px",
     height: "275px",
   },
+  link:
+    "https://gallery.fitbit.com/details/ee2777d4-95b6-4f3f-b75c-1f8812f43e80",
+  repo: "",
 };
 const ProjectData: Array<ProjectsType> = [
   Fitbit,

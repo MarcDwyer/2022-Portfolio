@@ -6,14 +6,24 @@ export default function Projects() {
   return (
     <div id="main-content">
       <MainContainer path="/projects">
-        <div className="flex-col bg-nav w-full h-full flex bg-myBackground overflow-y-auto">
-          <div className="mt-10 mb-10 ml-auto mr-auto ">
-            {ProjectData.map((project, index) => {
-              const isOdd = (index & 1) === 1;
-              return (
-                <ProjectCard project={project} key={project.id} isOdd={isOdd} />
-              );
-            })}
+        <div class="w-full h-full overflow-y-auto flex flex-col">
+          <div class="mb-auto m-auto w-4/5 flex flex-col">
+            <h1 class="text(3xl) font-bold mt-auto mb-auto mt-auto">
+              Projects
+            </h1>
+            <p class="mt-2">
+              Below is a selection of projects that I've built over the past 6
+              years or so.
+            </p>
+            <div class="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-4 ">
+              {ProjectData.map((project) => {
+                return (
+                  <ProjectCard
+                    project={project}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </MainContainer>
