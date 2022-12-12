@@ -1,13 +1,15 @@
 import ProjectData from "../appData/projectData.ts";
 import { MainContainer } from "../components/MainContainer.tsx";
 import { ProjectCard } from "../components/ProjectCard.tsx";
+import { Skills } from "../components/Skills.tsx";
 
 export default function Projects() {
   return (
     <div id="main-content">
       <MainContainer path="/projects">
-        <div class="w-full h-full overflow-y-auto flex flex-col">
+        <div class="w-full h-full overflow-y-auto flex flex-col pb-10">
           <div class="mb-auto m-auto w-4/5 flex flex-col">
+            <Skills />
             <h1 class="text(3xl) font-bold mt-auto mb-auto mt-auto">
               Projects
             </h1>
