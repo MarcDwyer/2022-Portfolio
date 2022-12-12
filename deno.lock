@@ -138,7 +138,10 @@
     "https://esm.sh/v99/twind@0.16.18/twind.d.ts": "168e8aeafcf13cfa02fbdd6fd2c1cc374784af6ddbf3c0e07db0b4199c4bf5f6"
   },
   "npm": {
-    "specifiers": { "react-tooltip": "react-tooltip@5.0.0_react@18.2.0" },
+    "specifiers": {
+      "preact-hint": "preact-hint@0.2.0",
+      "react-tooltip": "react-tooltip@5.0.0_react@18.2.0"
+    },
     "packages": {
       "@floating-ui/core@1.0.4": {
         "integrity": "sha512-FPFLbg2b06MIw1dqk2SOEMAMX3xlrreGjcui5OTxfBDtaKTmh0kioOVjT8gcfl58juawL/yF+S+gnq8aUYQx/Q==",
@@ -159,6 +162,14 @@
       "loose-envify@1.4.0": {
         "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
         "dependencies": { "js-tokens": "js-tokens@4.0.0" }
+      },
+      "preact-hint@0.2.0": {
+        "integrity": "sha512-OCrwBOEQYIKvIDaZRnsLw5hCiZzMCwSlhnKTQD3EwD9GDMksSjkLRd9mU0k9tIgAQLD7pWb1BFtvGu6fycYVJw==",
+        "dependencies": { "preact": "preact@10.11.3" }
+      },
+      "preact@10.11.3": {
+        "integrity": "sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==",
+        "dependencies": {}
       },
       "react-dom@18.2.0_react@18.2.0": {
         "integrity": "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==",

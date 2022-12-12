@@ -1,6 +1,6 @@
 import ProjectData from "../appData/projectData.ts";
 import { MainContainer } from "../components/MainContainer.tsx";
-import { ProjectCard } from "../components/ProjectCard.tsx";
+import ProjectCard from "../islands/ProjectCard.tsx";
 import { Skills } from "../components/Skills.tsx";
 
 export default function Projects() {
@@ -17,7 +17,7 @@ export default function Projects() {
               Below is a selection of projects that I've built over the past 6
               years or so.
             </p>
-            <div class="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-4 ">
+            <div class="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-20">
               {ProjectData.map((project) => {
                 return (
                   <ProjectCard

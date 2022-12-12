@@ -162,7 +162,18 @@ const Fitbit: ProjectsType = {
     "https://gallery.fitbit.com/details/ee2777d4-95b6-4f3f-b75c-1f8812f43e80",
   repo: "",
 };
+const Portfolio: ProjectsType = {
+  id: 1231212312313121,
+  title: "2022 Portfolio",
+  details: "This portfolio was created using Deno fresh with TailWindCSS",
+  stack: "TypeScript & TailWindCSS",
+  hosted: "Github",
+  repo: "https://github.com/MarcDwyer/2022-Portfolio",
+  url:
+    "https://fresh.deno.dev/illustration/lemon-squash.svg?__frsh_c=ekmg2w5q4drg",
+};
 const ProjectData: Array<ProjectsType> = [
+  Portfolio,
   Fitbit,
   TMI,
   OkChat,
