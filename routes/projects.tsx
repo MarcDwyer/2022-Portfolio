@@ -11,8 +11,8 @@ export default function Projects() {
         <title>Marc's Projects</title>
       </Head>
       <MainContainer path="/projects">
-        <div class="w-full h-full overflow-y-auto flex flex-col pb-10">
-          <div class="mb-auto m-auto w-4/5 flex flex-col">
+        <div class="w-full h-full flex overflow-y-auto mb-10">
+          <div class="flex flex-col max-w-screen-lg mx-auto my-16 px(4 sm:6 md:8) space-y-4">
             <Skills />
             <h1 class="text(3xl) font-bold mt-auto mb-auto mt-auto">
               Projects
@@ -21,7 +21,12 @@ export default function Projects() {
               Below is a selection of projects that I've built over the past 6
               years or so.
             </p>
-            <div class="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-20">
+            <div
+              style={{
+                gridAutoRows: "1fr",
+              }}
+              class="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-20"
+            >
               {ProjectData.map((project) => {
                 return (
                   <ProjectCard

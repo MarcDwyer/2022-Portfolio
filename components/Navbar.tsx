@@ -11,7 +11,7 @@ export default function Navbar({ path }: Props) {
       to: "/",
     },
     {
-      label: "Projects/Skills",
+      label: "Projects",
       to: "/projects",
     },
     {

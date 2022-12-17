@@ -10,9 +10,13 @@ export default {
         "myBackground": "rgb(35, 38, 43)",
         "btnColor": "rgb(35, 38, 43)",
         "textColor": "rgb(180, 186, 194)",
+        cardColor: "#383B40",
       },
       fontFamily: {
         mySans: ['"Source Sans Pro"', "sans-serif"],
+      },
+      gridAutoRows: {
+        projectRows: "1fr",
       },
     },
   },
