@@ -1,4 +1,3 @@
-import { Email } from "../components/Icons.tsx";
 import { MainContainer } from "../components/MainContainer.tsx";
 
 export default function Home() {
@@ -9,6 +8,7 @@ export default function Home() {
           <div className="flex flex-nowrap m-auto">
             <img
               src="https://i.imgur.com/F4iPL1v.png"
+              alt="Picture of Marc Dwyer"
               className=" h-40 w-40 rounded-full ml-auto mb-auto mt-auto mr-5 border-4 border-gray-600"
             />
             <div className="m-auto flex flex-col">

@@ -1,6 +1,6 @@
 import ProjectData from "../appData/projectData.ts";
 import { MainContainer } from "../components/MainContainer.tsx";
-import ProjectCard from "../islands/ProjectCard.tsx";
+import ProjectCard from "../components/ProjectCard.tsx";
 import { Skills } from "../components/Skills.tsx";
 
 export default function Projects() {
