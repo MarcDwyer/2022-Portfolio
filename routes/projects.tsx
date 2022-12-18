@@ -12,7 +12,7 @@ export default function Projects() {
       </Head>
       <MainContainer path="/projects">
         <div class="w-full h-full flex overflow-y-auto mb-10">
-          <div class="flex flex-col max-w-screen-lg mx-auto my-16 px(4 sm:6 md:8) space-y-4">
+          <div class="flex flex-col max-w-screen-lg mx-auto px(4 sm:6 md:8) space-y-4">
             <Skills />
             <h1 class="text(3xl) font-bold mt-auto mb-auto mt-auto">
               Projects
