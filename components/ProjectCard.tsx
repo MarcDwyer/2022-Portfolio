@@ -21,12 +21,12 @@ function ProjectCard({ project }: Props) {
         />
         <div class="flex flex-col pr-5 pl-5 pb-5">
           <div class="mt-4 flex items-center">
-            <span class="font-bold flex-1 group-hover:text-underline">
+            <span class="font-bold flex-1">
               {project.title}
             </span>
             {project.link && (
               <a
-                class="ml-2 hover:text-gray-700"
+                class="ml-2 hover:text-slate-100"
                 href={project.link}
                 target="_blank"
               >
@@ -35,7 +35,7 @@ function ProjectCard({ project }: Props) {
             )}
             {project.repo && (
               <a
-                class="ml-2 hover:text-gray-700"
+                class="ml-2 hover:text-slate-100"
                 href={project.repo}
                 target="_blank"
               >
