@@ -1,6 +1,7 @@
 import { ProjectsType } from "../appData/projectData.ts";
 import { GitHub, Link } from "../components/Icons.tsx";
 import ShowMore from "../islands/ShowMore.tsx";
+import { GithubLink } from "./GithubLink.tsx";
 
 type Props = {
   project: ProjectsType;
@@ -35,13 +36,10 @@ function ProjectCard({ project }: Props) {
               </a>
             )}
             {project.repo && (
-              <a
-                class="ml-2 hover:text-slate-100"
-                href={project.repo}
-                target="_blank"
-              >
-                <GitHub />
-              </a>
+              <GithubLink
+                link={project.repo}
+                classes="ml-2 hover:text-slate-100"
+              />
             )}
           </div>
           <div>

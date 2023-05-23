@@ -1,5 +1,5 @@
+import { Links } from "../appData/links.ts";
 import { GithubLink } from "./GithubLink.tsx";
-import { GitHub, LinkedIn } from "./Icons.tsx";
 import { LinkedInLink } from "./LinkedInLink.tsx";
 
 type Props = {
@@ -36,8 +36,8 @@ export default function Navbar({ path }: Props) {
             </a>
           );
         })}
-        <GithubLink classes="mr-5" />
-        <LinkedInLink classes="mr-5" />
+        <GithubLink classes="mr-5" link={Links.Github} />
+        <LinkedInLink classes="mr-5" link={Links.LinkedIn} />
       </div>
     </nav>
   );
