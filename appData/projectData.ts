@@ -158,7 +158,7 @@ const Fitbit: ProjectsType = {
 const Portfolio: ProjectsType = {
   id: 1231212312313121,
   title: "This Portfolio",
-  details: "This portfolio was created using Deno fresh with TailWindCSS",
+  details: "A server side rendered app built using Deno Fresh & TailWindCSS.",
   stack: "TypeScript & TailWindCSS",
   hosted: "Github",
   repo: "https://github.com/MarcDwyer/2022-Portfolio",

@@ -15,8 +15,8 @@ export default {
       fontFamily: {
         mySans: ['"Source Sans Pro"', "sans-serif"],
       },
-      gridAutoRows: {
-        projectRows: "1fr",
+      gridTemplateRows: {
+        25: "55px",
       },
     },
   },

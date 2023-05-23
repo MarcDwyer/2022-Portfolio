@@ -1,5 +1,6 @@
 import { ProjectsType } from "../appData/projectData.ts";
 import { GitHub, Link } from "../components/Icons.tsx";
+import ShowMore from "../islands/ShowMore.tsx";
 
 type Props = {
   project: ProjectsType;
@@ -43,11 +44,9 @@ function ProjectCard({ project }: Props) {
               </a>
             )}
           </div>
-          {
-            /* <p class="mt-5">
-            {project.details}
-          </p> */
-          }
+          <div>
+            <ShowMore text={project.details} />
+          </div>
         </div>
       </div>
     </div>

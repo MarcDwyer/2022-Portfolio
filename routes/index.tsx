@@ -1,23 +1,10 @@
-import { Head } from "$fresh/runtime.ts";
 import { MainContainer } from "../components/MainContainer.tsx";
-
-const DESCRIPTION = "This is Marc Dwyer's Portfolio page made with Deno Fresh";
-const TITLE = "Marc's Portfolio";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>{TITLE}</title>
-        <meta name="description" content={DESCRIPTION} />
-        <meta property="og:title" content={TITLE} />
-        <meta property="og:description" content={DESCRIPTION} />
-        <meta property="og:type" content="website" />
-        <meta name="author" content="Marc Dwyer" />
-        <meta name="keywords" content="Marc Dwyer, Marc, Dwyer, Portfolio" />
-      </Head>
-      <MainContainer path="/">
-        <div className="bg-nav w-full h-full flex">
+      <MainContainer path="/" bgColor="bg-nav">
+        <div className="w-full flex m-auto h-fit">
           <div className="flex flex-nowrap m-auto">
             <img
               src="https://i.imgur.com/F4iPL1v.png"

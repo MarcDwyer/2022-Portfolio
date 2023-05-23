@@ -7,8 +7,8 @@ export function Skills() {
     "Go",
   ];
   return (
-    <div class="mb-10 mt-10 p-10 flex flex-col border-b-1 border-t-1">
-      <h1 class="text(2xl) font-bold mt-auto mb-auto mt-auto">
+    <div class="mb-10 mt-10 mr-auto flex flex-col w-full">
+      <h1 class="text(2xl) font-bold mt-auto mb-auto">
         Most commonly used technologies:
       </h1>
       <div class="flex flex-nowrap">
@@ -16,7 +16,8 @@ export function Skills() {
           return <Skill skill={skill} />;
         })}
       </div>
-      <div class="flex flex-nowrap mt-5">
+      {
+        /* <div class="flex flex-nowrap mt-5">
         <h1 class="text(2xl) font-bold mt-auto mb-auto mt-auto">
           Fluent In:
         </h1>
@@ -24,7 +25,8 @@ export function Skills() {
           <Skill skill="spanish" />
           <Skill skill="english" />
         </div>
-      </div>
+      </div> */
+      }
     </div>
   );
 }
