@@ -1,4 +1,6 @@
+import { GithubLink } from "./GithubLink.tsx";
 import { GitHub, LinkedIn } from "./Icons.tsx";
+import { LinkedInLink } from "./LinkedInLink.tsx";
 
 type Props = {
   path: string;
@@ -34,22 +36,8 @@ export default function Navbar({ path }: Props) {
             </a>
           );
         })}
-        <a
-          href="https://github.com/MarcDwyer"
-          class="hover:text-green-600 inline-block mr-8"
-          target="_blank"
-          aria-label="Github"
-        >
-          <GitHub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/marc-dwyer-53087339/"
-          class="hover:text-green-600 inline-block mr-8"
-          aria-label="LinkedIn"
-          target="_blank"
-        >
-          <LinkedIn />
-        </a>
+        <GithubLink classes="mr-5" />
+        <LinkedInLink classes="mr-5" />
       </div>
     </nav>
   );

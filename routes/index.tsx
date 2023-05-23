@@ -1,3 +1,6 @@
+import { GithubLink } from "../components/GithubLink.tsx";
+import { GitHub, LinkedIn } from "../components/Icons.tsx";
+import { LinkedInLink } from "../components/LinkedInLink.tsx";
 import { MainContainer } from "../components/MainContainer.tsx";
 
 export default function Home() {
@@ -12,7 +15,9 @@ export default function Home() {
               className=" h-40 w-40 rounded-full ml-auto mb-auto mt-auto mr-5 border-4 border-gray-600"
             />
             <div className="m-auto flex flex-col">
-              <h1 className="m-auto font-bold text-2xl">Marc Dwyer</h1>
+              <h1 className="m-auto font-bold text-2xl flex">
+                Marc Dwyer
+              </h1>
               <h2 className="m-auto font-bold">
                 Front End Engineer
               </h2>
