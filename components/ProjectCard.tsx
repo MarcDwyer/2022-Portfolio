@@ -8,15 +8,13 @@ type Props = {
 
 function ProjectCard({ project }: Props) {
   return (
-    <div className="flex ml-auto mr-auto w-full max-w-sm mx-auto group bg-cardColor rounded-md">
+    <div className="flex ml-auto mr-auto w-full h-min max-w-sm mx-auto group bg-cardColor rounded-md">
       <div class="flex flex-col m-auto">
         <img
           aria-describedby="project"
           data-hint={project.details}
           src={project.url}
           alt={project.title}
-          width={600}
-          height={337}
           style={{ aspectRatio: "16/9" }}
           class="object-cover shadow-lg group-hover:(shadow-xl opacity-70)"
         />
