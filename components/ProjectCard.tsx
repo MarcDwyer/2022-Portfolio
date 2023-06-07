@@ -1,5 +1,5 @@
 import { ProjectsType } from "../appData/projectData.ts";
-import { GitHub, Link } from "../components/Icons.tsx";
+import { Link } from "../components/Icons.tsx";
 import ShowMore from "../islands/ShowMore.tsx";
 import { GithubLink } from "./GithubLink.tsx";
 
@@ -23,9 +23,7 @@ function ProjectCard({ project }: Props) {
         />
         <div class="flex flex-col pr-5 pl-5 pb-5">
           <div class="mt-4 flex items-center">
-            <span class="font-bold flex-1">
-              {project.title}
-            </span>
+            <span class="font-bold flex-1">{project.title}</span>
             {project.link && (
               <a
                 class="ml-2 hover:text-slate-100"
