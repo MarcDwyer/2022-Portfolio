@@ -32,11 +32,11 @@ export default function Navbar({ match }: Props) {
       to: "/work",
       match: PathMatches.Work,
     },
-    // {
-    //   label: "Blog",
-    //   to: "/blog",
-    //   match: PathMatches.Blog,
-    // },
+    {
+      label: "Blog",
+      to: "/blog",
+      match: PathMatches.Blog,
+    },
     // {
     //   label: "Games",
     //   to: "/games/",
