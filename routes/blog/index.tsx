@@ -7,8 +7,6 @@ export const handler: Handlers<BlogPost[] | null> = {
   async GET(_req, ctx) {
     try {
       const blogs = await getBlogs();
-      console.log({ blogs });
-
       return ctx.render(blogs);
     } catch (e) {
       return new Response("Project not found", { status: 404 });
@@ -16,8 +14,7 @@ export const handler: Handlers<BlogPost[] | null> = {
   },
 };
 
-export default function Blog(props: PageProps<BlogPost[] | null>) {
-  console.log({ props });
+export default function Blog({ data }: PageProps<BlogPost[] | null>) {
   return (
     <MainContainer title="Blog" path="/blog" pathMatch={PathMatches.Blog}>
       <div class="mt-10 mb-auto mr-auto ml-auto w-3/6 p-5">
@@ -27,6 +24,12 @@ export default function Blog(props: PageProps<BlogPost[] | null>) {
         >
           Create Blog
         </a>
+        <div className="blog-container flex flex-col mt-5">
+          {data &&
+            data.map((blog, i) => {
+              return <span key={i}>Title: {blog.title}</span>;
+            })}
+        </div>
       </div>
     </MainContainer>
   );

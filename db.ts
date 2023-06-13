@@ -3,9 +3,13 @@ export type BlogPost = {
   author: string;
   description: string;
   body: string;
+  uuid: string;
 };
 
-export const createBlogPost = (blogPost?: BlogPost): BlogPost => ({
+export const createBlogPost = (
+  blogPost?: Omit<BlogPost, "uuid">
+): BlogPost => ({
+  uuid: crypto.randomUUID(),
   title: "",
   author: "Marc Dwyer",
   description: "",
@@ -15,12 +19,16 @@ export const createBlogPost = (blogPost?: BlogPost): BlogPost => ({
 
 export const db = await Deno.openKv();
 
-const BLOGS = ["blogs"];
+const BLOGS = "blogs";
+
 export async function getBlogs() {
-  const res = await db.get<BlogPost[]>(BLOGS);
-  return res.value;
+  const blogs: BlogPost[] = [];
+  for await (const { value } of db.list<BlogPost>({ prefix: [BLOGS] })) {
+    blogs.push(value);
+  }
+  return blogs;
 }
 
 export function saveBlog(blogPost: BlogPost) {
-  return db.set(BLOGS, blogPost);
+  return db.set([BLOGS, blogPost.uuid], blogPost);
 }

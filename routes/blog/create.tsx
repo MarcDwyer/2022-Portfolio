@@ -33,15 +33,18 @@ export default function CreateBlog() {
       pathMatch={PathMatches.Blog}
     >
       <div class="mt-10 mb-auto mr-auto ml-auto w-3/6 p-5">
+        <a
+          href="/blog"
+          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Go back
+        </a>
         <form
           method="post"
-          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          class="bg-gray-700 shadow-md rounded-md px-8 pt-6 pb-8 mb-4 mt-4"
         >
           <div class="mb-4">
-            <label
-              class="block text-gray-700 text-sm font-bold mb-2"
-              for="username"
-            >
+            <label class="block text-sm font-bold mb-2" for="username">
               Title
             </label>
             <input
@@ -60,15 +63,12 @@ export default function CreateBlog() {
               Body
             </label>
             <textarea
-              class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="body"
               type="text"
               name="body"
-              placeholder="Waddaya wanna talk about uwu"
+              placeholder="What would you like to talk about?"
             />
-            <p class="text-red-500 text-xs italic">
-              Please add content to your blog
-            </p>
           </div>
           <div class="flex items-center justify-between">
             <button
@@ -77,17 +77,8 @@ export default function CreateBlog() {
             >
               Submit
             </button>
-            <a
-              class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-              href="#"
-            >
-              Forgot Password?
-            </a>
           </div>
         </form>
-        <p class="text-center text-gray-500 text-xs">
-          &copy;2020 Acme Corp. All rights reserved.
-        </p>
       </div>
     </MainContainer>
   );
