@@ -1,8 +1,16 @@
+import { getPreviewFromBlog } from "./util/blog-util.ts";
+
 export type BlogPostType = {
   title: string;
   author: string;
   description: string;
   body: string;
+  uuid: string;
+};
+export type BlogPreviewType = {
+  title: string;
+  author: string;
+  description: string;
   uuid: string;
 };
 
@@ -31,4 +39,12 @@ export async function getBlogs() {
 
 export function saveBlog(blogPost: BlogPostType) {
   return db.set([BLOGS, blogPost.uuid], blogPost);
+}
+
+export async function getBlogPreviews() {
+  const blogPreviews: BlogPreviewType[] = [];
+  for await (const { value } of db.list<BlogPostType>({ prefix: [BLOGS] })) {
+    blogPreviews.push(getPreviewFromBlog(value));
+  }
+  return blogPreviews;
 }

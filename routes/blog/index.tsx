@@ -1,8 +1,8 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
-import { BlogPost } from "../../components/BlogPost.tsx";
+import { BlogPreview } from "../../components/BlogPreview.tsx";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
-import { BlogPostType, getBlogs } from "../../db.ts";
+import { BlogPostType, BlogPreviewType, getBlogs } from "../../db.ts";
 
 export const handler: Handlers<BlogPostType[] | null> = {
   async GET(_req, ctx) {
@@ -15,7 +15,7 @@ export const handler: Handlers<BlogPostType[] | null> = {
   },
 };
 
-export default function Blog({ data }: PageProps<BlogPostType[] | null>) {
+export default function Blog({ data }: PageProps<BlogPreviewType[] | null>) {
   console.log({ data });
   return (
     <MainContainer title="Blog" path="/blog" pathMatch={PathMatches.Blog}>
@@ -28,8 +28,8 @@ export default function Blog({ data }: PageProps<BlogPostType[] | null>) {
         </a>
         <div className="blog-container mt-5 grid grid-cols-1 gap-2">
           {data &&
-            data.map((blog, i) => {
-              return <BlogPost key={i} blogPost={blog} />;
+            data.map((preview, i) => {
+              return <BlogPreview key={i} blogPreview={preview} />;
             })}
         </div>
       </div>
