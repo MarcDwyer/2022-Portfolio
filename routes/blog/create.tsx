@@ -2,21 +2,34 @@ import { Handlers } from "https://deno.land/x/fresh@1.1.6/server.ts";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
 import { createBlogPost, saveBlog } from "../../db.ts";
+import { checkIfPasswordMatch } from "../../util/password-util.ts";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
     return await ctx.render();
   },
   async POST(req, ctx) {
+    const headers = new Headers();
+
     const form = await req.formData();
+    const password = form.get("password") ?? "";
+
+    const isAllowed = checkIfPasswordMatch(password as string);
+
+    if (!isAllowed) {
+      headers.set("location", "/blog/create");
+      return new Response(null, {
+        status: 401,
+      });
+    }
+
     const blogPost = createBlogPost({
       title: (form.get("title") as string) ?? "",
       body: (form.get("body") as string) ?? "",
-      author: "",
+      author: (form.get("author") as string) ?? "",
       description: "",
     });
     await saveBlog(blogPost);
-    const headers = new Headers();
     headers.set("location", "/blog");
     return new Response(null, {
       status: 303, // See Other
@@ -44,7 +57,7 @@ export default function CreateBlog() {
           class="bg-gray-700 shadow-md rounded-md px-8 pt-6 pb-8 mb-4 mt-4"
         >
           <div class="mb-4">
-            <label class="block text-sm font-bold mb-2" for="username">
+            <label class="block text-sm font-bold mb-2" for="title">
               Title
             </label>
             <input
@@ -68,6 +81,30 @@ export default function CreateBlog() {
               type="text"
               name="body"
               placeholder="What would you like to talk about?"
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-bold mb-2" for="author">
+              Author
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="author"
+              type="text"
+              placeholder="Author"
+              name="author"
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-bold mb-2" for="password">
+              Password
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="text"
+              placeholder="Whats the super secret password?"
+              name="password"
             />
           </div>
           <div class="flex items-center justify-between">

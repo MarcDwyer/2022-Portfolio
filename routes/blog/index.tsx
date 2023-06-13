@@ -25,7 +25,7 @@ export default function Blog({ data }: PageProps<BlogPreviewType[] | null>) {
         >
           Create Blog
         </a>
-        <div className="blog-container mt-5 grid grid-cols-1 gap-2">
+        <div className="blog-container mt-5 grid grid-cols-3 gap-2">
           {data &&
             data.map((preview, i) => {
               return <BlogPreview key={i} blogPreview={preview} />;
