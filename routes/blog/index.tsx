@@ -2,13 +2,13 @@ import type { Handlers, PageProps } from "$fresh/server.ts";
 import { BlogPreview } from "../../components/BlogPreview.tsx";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
-import { BlogPostType, BlogPreviewType, getBlogs } from "../../db.ts";
+import { BlogPreviewType, getBlogPreviews } from "../../db.ts";
 
-export const handler: Handlers<BlogPostType[] | null> = {
+export const handler: Handlers<BlogPreviewType[] | null> = {
   async GET(_req, ctx) {
     try {
-      const blogs = await getBlogs();
-      return ctx.render(blogs);
+      const blogPreviews = await getBlogPreviews();
+      return ctx.render(blogPreviews);
     } catch (e) {
       return new Response("Project not found", { status: 404 });
     }
@@ -16,7 +16,6 @@ export const handler: Handlers<BlogPostType[] | null> = {
 };
 
 export default function Blog({ data }: PageProps<BlogPreviewType[] | null>) {
-  console.log({ data });
   return (
     <MainContainer title="Blog" path="/blog" pathMatch={PathMatches.Blog}>
       <div class="mt-10 mb-auto mr-auto ml-auto w-3/4 p-5">
