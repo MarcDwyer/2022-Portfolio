@@ -20,3 +20,7 @@ export async function getBlogs() {
   const res = await db.get<BlogPost[]>(BLOGS);
   return res.value;
 }
+
+export function saveBlog(blogPost: BlogPost) {
+  return db.set(BLOGS, blogPost);
+}
