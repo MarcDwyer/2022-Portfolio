@@ -1,7 +1,7 @@
 import { Handlers } from "https://deno.land/x/fresh@1.1.6/server.ts";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
-import { BlogPost, createBlogPost, saveBlog } from "../../db.ts";
+import { createBlogPost, saveBlog } from "../../db.ts";
 
 export const handler: Handlers = {
   async GET(req, ctx) {
