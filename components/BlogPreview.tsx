@@ -1,4 +1,4 @@
-import { BlogPreviewType } from "../db.ts";
+import { BlogPreviewType } from "../db-actions/blog-actions.ts";
 
 type Props = {
   blogPreview: BlogPreviewType;

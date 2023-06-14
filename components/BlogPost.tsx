@@ -1,4 +1,4 @@
-import { BlogPostType } from "../db.ts";
+import { BlogPostType } from "../db-actions/blog-actions.ts";
 
 type Props = {
   blogPost: BlogPostType;
