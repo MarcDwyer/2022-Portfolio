@@ -3,8 +3,8 @@ import { BlogPreview } from "../../components/BlogPreview.tsx";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
 import {
-  getBlogPreviews,
   BlogPreviewType,
+  getBlogPreviews,
 } from "../../db-actions/blog-actions.ts";
 
 export const handler: Handlers<BlogPreviewType[] | null> = {

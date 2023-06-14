@@ -1,9 +1,9 @@
 import { useState } from "preact/hooks";
-import { MainContainer } from "../components/MainContainer.tsx";
 import { JSX } from "preact/jsx-runtime";
 import { BlogPostType } from "../db-actions/blog-actions.ts";
-
-export type CreateBlogFormType = Omit<BlogPostType, "uuid">;
+export type CreateBlogFormType = Omit<BlogPostType, "uuid"> & {
+  password: string;
+};
 
 export default function CreateBlogForm() {
   const [formData, _setFormData] = useState<CreateBlogFormType>({
@@ -11,8 +11,8 @@ export default function CreateBlogForm() {
     body: "",
     author: "",
     description: "",
+    password: "",
   });
-  const [password, setPassword] = useState("");
 
   const setFormData = (changes: Partial<FormData>) => {
     _setFormData({
@@ -113,8 +113,8 @@ export default function CreateBlogForm() {
             type="text"
             placeholder="Whats the super secret password?"
             name="password"
-            value={password}
-            onChange={(e) => setPassword(e.currentTarget.value)}
+            value={formData.password}
+            onChange={handleChange}
           />
         </div>
         <div class="flex items-center justify-between">

@@ -25,7 +25,7 @@ export const createBlogPost = (
   body: "",
   ...blogPost,
 });
-const BLOGS = "blogs";
+export const BLOGS = "blogs";
 
 export async function getBlogs() {
   const blogs: BlogPostType[] = [];

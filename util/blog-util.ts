@@ -1,5 +1,4 @@
-import { BlogPreviewType } from "../db.ts";
-import { BlogPostType } from "../db.ts";
+import { BlogPostType, BlogPreviewType } from "../db-actions/blog-actions.ts";
 
 export const getPreviewFromBlog = ({
   uuid,
