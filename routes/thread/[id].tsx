@@ -3,6 +3,7 @@ import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
 import { ThreadCard } from "../../components/ThreadCard.tsx";
 import { ThreadType, threadActions } from "../../db-actions/thread-actions.ts";
+import Comments from "../../islands/Comments.tsx";
 
 export const handler: Handlers<ThreadType | null> = {
   async GET(_req, ctx) {
@@ -31,7 +32,12 @@ export default function ThreadView(props: PageProps<ThreadType | null>) {
         >
           View Threads
         </a>
-        {thread && <ThreadCard thread={thread} />}
+        {thread && (
+          <>
+            <ThreadCard thread={thread} />
+            <Comments threadUUID={thread.uuid} />
+          </>
+        )}
       </div>
     </MainContainer>
   );
