@@ -38,7 +38,6 @@ export default function CreateThreadForm() {
         body: JSON.stringify(formData),
         headers,
       });
-      console.log({ resp });
     } catch (e) {
       console.error(e);
     }
