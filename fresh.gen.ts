@@ -9,9 +9,10 @@ import * as $2 from "./routes/games/index.tsx";
 import * as $3 from "./routes/games/snake.tsx";
 import * as $4 from "./routes/index.tsx";
 import * as $5 from "./routes/projects.tsx";
-import * as $6 from "./routes/thread/create.tsx";
-import * as $7 from "./routes/thread/index.tsx";
-import * as $8 from "./routes/work.tsx";
+import * as $6 from "./routes/thread/[id].tsx";
+import * as $7 from "./routes/thread/create.tsx";
+import * as $8 from "./routes/thread/index.tsx";
+import * as $9 from "./routes/work.tsx";
 import * as $$0 from "./islands/CreateThreadForm.tsx";
 import * as $$1 from "./islands/ShowMore.tsx";
 import * as $$2 from "./islands/Snake.tsx";
@@ -24,9 +25,10 @@ const manifest = {
     "./routes/games/snake.tsx": $3,
     "./routes/index.tsx": $4,
     "./routes/projects.tsx": $5,
-    "./routes/thread/create.tsx": $6,
-    "./routes/thread/index.tsx": $7,
-    "./routes/work.tsx": $8,
+    "./routes/thread/[id].tsx": $6,
+    "./routes/thread/create.tsx": $7,
+    "./routes/thread/index.tsx": $8,
+    "./routes/work.tsx": $9,
   },
   islands: {
     "./islands/CreateThreadForm.tsx": $$0,

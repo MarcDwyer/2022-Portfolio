@@ -5,14 +5,14 @@ export type GeneralDBProps = {
 export type AdditionalKeys = string[];
 
 export class GeneralDBActions<T> {
-  db: Deno.Kv;
-  entryKey: string;
+  private db: Deno.Kv;
+  private entryKey: string;
 
   constructor({ db, entryKey }: GeneralDBProps) {
     this.db = db;
     this.entryKey = entryKey;
   }
-  mergeKeys(additionalKeys?: AdditionalKeys) {
+  private mergeKeys(additionalKeys?: AdditionalKeys) {
     if (!additionalKeys) {
       return [this.entryKey];
     }
@@ -29,8 +29,9 @@ export class GeneralDBActions<T> {
     return result;
   }
 
-  getSingleEntry(additionalKeys?: AdditionalKeys) {
-    return this.db.get(this.mergeKeys(additionalKeys));
+  async getSingleEntry(additionalKeys?: AdditionalKeys) {
+    const { value } = await this.db.get<T>(this.mergeKeys(additionalKeys));
+    return value;
   }
 
   saveEntry(data: T, additionalKeys?: AdditionalKeys) {
