@@ -1,12 +1,13 @@
 import { useState } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
-import { BlogPostType } from "../db-actions/blog-actions.ts";
-export type CreateBlogFormType = Omit<BlogPostType, "uuid"> & {
+import { ThreadType } from "../db-actions/thread-actions.ts";
+
+export type CreateThreadType = Omit<ThreadType, "uuid"> & {
   password: string;
 };
 
-export default function CreateBlogForm() {
-  const [formData, _setFormData] = useState<CreateBlogFormType>({
+export default function CreateThreadForm() {
+  const [formData, _setFormData] = useState<CreateThreadType>({
     title: "",
     body: "",
     author: "",
@@ -32,7 +33,7 @@ export default function CreateBlogForm() {
     try {
       const headers = new Headers();
       headers.set("Content-Type", "application/json");
-      const resp = await fetch("/api/create-form", {
+      const resp = await fetch("/api/thread/save", {
         method: "POST",
         body: JSON.stringify(formData),
         headers,
@@ -46,7 +47,7 @@ export default function CreateBlogForm() {
   return (
     <div class="mt-10 mb-auto mr-auto ml-auto w-3/6 p-5">
       <a
-        href="/blog"
+        href="/thread"
         class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       >
         Go back

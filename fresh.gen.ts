@@ -4,13 +4,13 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/api/create-form.ts";
-import * as $2 from "./routes/blog/create.tsx";
-import * as $3 from "./routes/blog/index.tsx";
-import * as $4 from "./routes/games/index.tsx";
-import * as $5 from "./routes/games/snake.tsx";
-import * as $6 from "./routes/index.tsx";
-import * as $7 from "./routes/projects.tsx";
+import * as $1 from "./routes/api/thread/save.ts";
+import * as $2 from "./routes/games/index.tsx";
+import * as $3 from "./routes/games/snake.tsx";
+import * as $4 from "./routes/index.tsx";
+import * as $5 from "./routes/projects.tsx";
+import * as $6 from "./routes/thread/create.tsx";
+import * as $7 from "./routes/thread/index.tsx";
 import * as $8 from "./routes/work.tsx";
 import * as $$0 from "./islands/CreateBlogForm.tsx";
 import * as $$1 from "./islands/ShowMore.tsx";
@@ -19,13 +19,13 @@ import * as $$2 from "./islands/Snake.tsx";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/api/create-form.ts": $1,
-    "./routes/blog/create.tsx": $2,
-    "./routes/blog/index.tsx": $3,
-    "./routes/games/index.tsx": $4,
-    "./routes/games/snake.tsx": $5,
-    "./routes/index.tsx": $6,
-    "./routes/projects.tsx": $7,
+    "./routes/api/thread/save.ts": $1,
+    "./routes/games/index.tsx": $2,
+    "./routes/games/snake.tsx": $3,
+    "./routes/index.tsx": $4,
+    "./routes/projects.tsx": $5,
+    "./routes/thread/create.tsx": $6,
+    "./routes/thread/index.tsx": $7,
     "./routes/work.tsx": $8,
   },
   islands: {

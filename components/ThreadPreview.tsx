@@ -1,11 +1,11 @@
-import { BlogPreviewType } from "../db-actions/blog-actions.ts";
+import { ThreadPreviewType } from "../db-actions/thread-actions.ts";
 
 type Props = {
-  blogPreview: BlogPreviewType;
+  threadPreview: ThreadPreviewType;
 };
 
-export const BlogPreview = ({ blogPreview }: Props) => {
-  const { title, author, description, uuid } = blogPreview;
+export const ThreadPreview = ({ threadPreview }: Props) => {
+  const { title, author, description, uuid } = threadPreview;
   return (
     <a
       href={`/blog/${uuid}`}

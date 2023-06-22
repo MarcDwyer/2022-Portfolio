@@ -1,6 +1,6 @@
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
-import CreateBlogForm from "../../islands/CreateBlogForm.tsx";
+import CreateThreadForm from "../../islands/CreateBlogForm.tsx";
 
 export default function CreateBlog() {
   return (
@@ -9,7 +9,7 @@ export default function CreateBlog() {
       path="/blog/create"
       pathMatch={PathMatches.Blog}
     >
-      <CreateBlogForm />
+      <CreateThreadForm />
     </MainContainer>
   );
 }

@@ -13,6 +13,7 @@ export enum PathMatches {
   Work = "Work",
   Blog = "Blog",
   Projects = "Projects",
+  Thread = "Thread",
 }
 
 export default function Navbar({ match }: Props) {
@@ -33,9 +34,9 @@ export default function Navbar({ match }: Props) {
       match: PathMatches.Work,
     },
     {
-      label: "Blog",
-      to: "/blog",
-      match: PathMatches.Blog,
+      label: "Thread",
+      to: "/thread",
+      match: PathMatches.Thread,
     },
     // {
     //   label: "Games",
