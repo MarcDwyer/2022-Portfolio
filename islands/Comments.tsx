@@ -7,17 +7,17 @@ type Props = {
   threadUUID: string;
 };
 function Comment({ comment }: { comment: Comment }) {
+  const author = comment.author === "" ? "Anonymous" : comment.author;
   return (
-    <div class="flex flex-col">
-      <p>{comment.text}</p>
-      <span>{comment.author}</span>
+    <div class="flex flex-col p-2 rounded-md bg-gray-700 mb-2">
+      <p class="mb-2">{comment.text}</p>
+      <span class="text-sm">By: {author}</span>
     </div>
   );
 }
 export default function Comments({ comments, threadUUID }: Props) {
   const [cachedComents, _setCachedComments] = useState<Comment[] | null>(null);
 
-  console.log({ comments });
   useEffect(() => {
     _setCachedComments(comments);
   }, [comments]);
