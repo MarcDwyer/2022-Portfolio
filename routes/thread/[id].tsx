@@ -1,6 +1,5 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
-import { AddComment } from "../../components/AddComment.tsx";
-import { Comments } from "../../components/Comments.tsx";
+import Comments from "../../islands/Comments.tsx";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
 import { ThreadCard } from "../../components/ThreadCard.tsx";
@@ -49,8 +48,9 @@ export default function ThreadView(props: PageProps<ThreadType | null>) {
         {thread && (
           <>
             <ThreadCard thread={thread} />
-            <Comments comments={thread.comments} />
-            <AddComment threadUUID={thread.uuid} />
+            <div class="p-16">
+              <Comments comments={thread.comments} threadUUID={thread.uuid} />
+            </div>
           </>
         )}
       </div>

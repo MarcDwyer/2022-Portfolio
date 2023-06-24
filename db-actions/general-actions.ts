@@ -5,7 +5,7 @@ export type GeneralDBProps = {
 export type AdditionalKeys = string[];
 
 export class GeneralDBActions<T> {
-  private db: Deno.Kv;
+  db: Deno.Kv;
   private entryKey: string;
 
   constructor({ db, entryKey }: GeneralDBProps) {
@@ -34,7 +34,7 @@ export class GeneralDBActions<T> {
     return value;
   }
 
-  saveEntry(data: T, additionalKeys?: AdditionalKeys) {
+  saveEntry<J>(data: J, additionalKeys?: AdditionalKeys) {
     return this.db.set(this.mergeKeys(additionalKeys), data);
   }
   deleteEntry(additionalKeys?: AdditionalKeys) {

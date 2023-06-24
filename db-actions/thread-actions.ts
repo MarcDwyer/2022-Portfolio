@@ -6,6 +6,8 @@ export const THREAD = ["thread"];
 export type Comment = {
   author: string;
   text: string;
+  uuid: string;
+  date: number;
 };
 export type ThreadType = {
   title: string;
@@ -14,6 +16,7 @@ export type ThreadType = {
   body: string;
   uuid: string;
   comments: Comment[];
+  date: number;
 };
 export type ThreadPreviewType = {
   title: string;
@@ -31,6 +34,7 @@ export const createThread = (
   description: "",
   body: "",
   comments: [],
+  date: Date.now(),
   ...thread,
 });
 
@@ -45,7 +49,12 @@ export const createPreviewFromThread = ({
   description,
   uuid,
 });
-
+export const createComment = (commentText: string): Comment => ({
+  text: commentText,
+  author: "",
+  uuid: crypto.randomUUID(),
+  date: Date.now(),
+});
 class ThreadDBActions extends GeneralDBActions<ThreadType> {
   constructor(props: GeneralDBProps) {
     super(props);
@@ -58,6 +67,18 @@ class ThreadDBActions extends GeneralDBActions<ThreadType> {
       threadPreview.push(createPreviewFromThread(thread));
     }
     return threadPreview;
+  }
+  async saveComment(threadUUID: string, commentText: string) {
+    const comment = createComment(commentText);
+    const thread = await this.getSingleEntry([threadUUID]);
+    if (!thread) {
+      throw new Error(`Cannot find thread: ${threadUUID}`);
+    }
+    thread.comments.unshift(comment);
+
+    await this.saveEntry(thread, [threadUUID]);
+
+    return thread.comments;
   }
 }
 
