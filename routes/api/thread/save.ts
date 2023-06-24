@@ -2,7 +2,7 @@ import { Handlers } from "https://deno.land/x/fresh@1.1.6/server.ts";
 import { CreateThreadType } from "../../../islands/CreateThreadForm.tsx";
 import {
   createThread,
-  threadActions,
+  threadDBActions,
 } from "../../../db-actions/thread-actions.ts";
 
 export const handler: Handlers<void> = {
@@ -12,7 +12,7 @@ export const handler: Handlers<void> = {
 
       const createdThread = createThread(thread);
 
-      await threadActions.saveEntry(createdThread, [createdThread.uuid]);
+      await threadDBActions.saveEntry(createdThread, [createdThread.uuid]);
 
       return new Response(JSON.stringify(createdThread), {
         status: 200,

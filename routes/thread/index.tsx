@@ -4,13 +4,13 @@ import { PathMatches } from "../../components/Navbar.tsx";
 import { ThreadPreview } from "../../components/ThreadPreview.tsx";
 import {
   ThreadPreviewType,
-  getThreadPreviews,
+  threadDBActions,
 } from "../../db-actions/thread-actions.ts";
 
 export const handler: Handlers<ThreadPreviewType[] | null> = {
   async GET(_req, ctx) {
     try {
-      const threads = await getThreadPreviews();
+      const threads = await threadDBActions.getThreadPreviews();
       return ctx.render(threads);
     } catch (e) {
       return new Response("Project not found", { status: 404 });

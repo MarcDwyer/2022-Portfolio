@@ -1,19 +1,33 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
+import { AddComment } from "../../components/AddComment.tsx";
+import { Comments } from "../../components/Comments.tsx";
 import { MainContainer } from "../../components/MainContainer.tsx";
 import { PathMatches } from "../../components/Navbar.tsx";
 import { ThreadCard } from "../../components/ThreadCard.tsx";
-import { ThreadType, threadActions } from "../../db-actions/thread-actions.ts";
-import Comments from "../../islands/Comments.tsx";
+import {
+  ThreadType,
+  threadDBActions,
+} from "../../db-actions/thread-actions.ts";
 
 export const handler: Handlers<ThreadType | null> = {
   async GET(_req, ctx) {
     const { id } = ctx.params as { id: string };
     try {
-      const thread = await threadActions.getSingleEntry([id]);
+      const thread = await threadDBActions.getSingleEntry([id]);
       if (!thread) throw new Error("Project not found");
+      if (!thread.comments) {
+        threadDBActions.deleteEntry([id]);
+        throw {
+          message: `Thread ${id} was deleted as it didn't have comments`,
+        };
+      }
       return ctx.render(thread);
-    } catch (e) {
-      return new Response("Project not found", { status: 404 });
+    } catch (e: any) {
+      let msg = "Project not found";
+      if ("message" in e) {
+        msg = e.message;
+      }
+      return new Response(msg, { status: 404 });
     }
   },
 };
@@ -35,7 +49,8 @@ export default function ThreadView(props: PageProps<ThreadType | null>) {
         {thread && (
           <>
             <ThreadCard thread={thread} />
-            <Comments threadUUID={thread.uuid} />
+            <Comments comments={thread.comments} />
+            <AddComment threadUUID={thread.uuid} />
           </>
         )}
       </div>

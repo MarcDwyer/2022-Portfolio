@@ -37,6 +37,9 @@ export class GeneralDBActions<T> {
   saveEntry(data: T, additionalKeys?: AdditionalKeys) {
     return this.db.set(this.mergeKeys(additionalKeys), data);
   }
+  deleteEntry(additionalKeys?: AdditionalKeys) {
+    return this.db.delete(this.mergeKeys(additionalKeys));
+  }
 
   async *iterateEntries(additionalKeys?: AdditionalKeys) {
     for await (const { value } of this.db.list<T>({

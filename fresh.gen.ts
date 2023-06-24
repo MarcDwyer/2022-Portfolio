@@ -13,10 +13,9 @@ import * as $6 from "./routes/thread/[id].tsx";
 import * as $7 from "./routes/thread/create.tsx";
 import * as $8 from "./routes/thread/index.tsx";
 import * as $9 from "./routes/work.tsx";
-import * as $$0 from "./islands/Comments.tsx";
-import * as $$1 from "./islands/CreateThreadForm.tsx";
-import * as $$2 from "./islands/ShowMore.tsx";
-import * as $$3 from "./islands/Snake.tsx";
+import * as $$0 from "./islands/CreateThreadForm.tsx";
+import * as $$1 from "./islands/ShowMore.tsx";
+import * as $$2 from "./islands/Snake.tsx";
 
 const manifest = {
   routes: {
@@ -32,10 +31,9 @@ const manifest = {
     "./routes/work.tsx": $9,
   },
   islands: {
-    "./islands/Comments.tsx": $$0,
-    "./islands/CreateThreadForm.tsx": $$1,
-    "./islands/ShowMore.tsx": $$2,
-    "./islands/Snake.tsx": $$3,
+    "./islands/CreateThreadForm.tsx": $$0,
+    "./islands/ShowMore.tsx": $$1,
+    "./islands/Snake.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

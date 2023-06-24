@@ -2,11 +2,12 @@ import { useState } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
 import { ThreadType } from "../db-actions/thread-actions.ts";
 
-export type CreateThreadType = Omit<ThreadType, "uuid"> & {
+export type CreateThreadType = Omit<ThreadType, "uuid" | "comments"> & {
   password: string;
 };
 
-export default function CreateThreadForm() {
+export default function CreateThreadForm(props: any) {
+  console.log({ props });
   const [formData, _setFormData] = useState<CreateThreadType>({
     title: "",
     body: "",
@@ -33,11 +34,14 @@ export default function CreateThreadForm() {
     try {
       const headers = new Headers();
       headers.set("Content-Type", "application/json");
-      const resp = await fetch("/api/thread/save", {
+      const threadResp = await fetch("/api/thread/save", {
         method: "POST",
         body: JSON.stringify(formData),
         headers,
       });
+      const savedThread = (await threadResp.json()) as ThreadType;
+      const redirect = `${window.location.origin}/thread/${savedThread.uuid}`;
+      window.location.href = redirect;
     } catch (e) {
       console.error(e);
     }
