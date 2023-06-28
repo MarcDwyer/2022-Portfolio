@@ -10,10 +10,11 @@ import * as $3 from "./routes/games/index.tsx";
 import * as $4 from "./routes/games/snake.tsx";
 import * as $5 from "./routes/index.tsx";
 import * as $6 from "./routes/projects.tsx";
-import * as $7 from "./routes/thread/[id].tsx";
-import * as $8 from "./routes/thread/create.tsx";
-import * as $9 from "./routes/thread/index.tsx";
-import * as $10 from "./routes/work.tsx";
+import * as $7 from "./routes/reviews.tsx";
+import * as $8 from "./routes/thread/[id].tsx";
+import * as $9 from "./routes/thread/create.tsx";
+import * as $10 from "./routes/thread/index.tsx";
+import * as $11 from "./routes/work.tsx";
 import * as $$0 from "./islands/AddComment.tsx";
 import * as $$1 from "./islands/Comments.tsx";
 import * as $$2 from "./islands/CreateThreadForm.tsx";
@@ -29,10 +30,11 @@ const manifest = {
     "./routes/games/snake.tsx": $4,
     "./routes/index.tsx": $5,
     "./routes/projects.tsx": $6,
-    "./routes/thread/[id].tsx": $7,
-    "./routes/thread/create.tsx": $8,
-    "./routes/thread/index.tsx": $9,
-    "./routes/work.tsx": $10,
+    "./routes/reviews.tsx": $7,
+    "./routes/thread/[id].tsx": $8,
+    "./routes/thread/create.tsx": $9,
+    "./routes/thread/index.tsx": $10,
+    "./routes/work.tsx": $11,
   },
   islands: {
     "./islands/AddComment.tsx": $$0,
