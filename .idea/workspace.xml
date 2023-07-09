@@ -5,31 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38959541-3a86-4fa8-b5be-271cbacf0efd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-actions/blog-actions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-actions/general-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db-actions/general-actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-actions/review-actions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-actions/thread-actions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deno.lock" beforeDir="false" afterPath="$PROJECT_DIR$/deno.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fresh.gen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fresh.gen.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/islands/AddComment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/islands/AddComment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/islands/Comments.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/islands/CreateThreadForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/islands/Snake.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/thread/add-comment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/thread/save.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/games/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/games/snake.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/reviews.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/thread/[id].tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/thread/create.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/thread/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/work.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/work.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/comments.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/comments.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +65,7 @@
       <workItem from="1688867229461" duration="6689000" />
       <workItem from="1688874384099" duration="36000" />
       <workItem from="1688874567448" duration="638000" />
+      <workItem from="1688881092491" duration="161000" />
     </task>
     <servers />
   </component>

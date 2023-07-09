@@ -36,7 +36,7 @@ export class CommentActions {
 
   async get() {
     const { value } = await this.db.get<Comment[]>(["comments"]);
-    return value ? value : [];
+    return value || [];
   }
 }
 

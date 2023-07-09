@@ -11,6 +11,9 @@ export const handler: Handlers<Comment[]> = {
     return ctx.render(comments);
   },
 };
+type A = {
+  b: number;
+};
 
 export default function CommentsPage(props: PageProps<Comment[]>) {
   const comments = props.data;
