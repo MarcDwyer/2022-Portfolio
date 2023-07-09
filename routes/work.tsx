@@ -1,7 +1,7 @@
 import WorkExp from "../appData/workData.ts";
 import { MainContainer } from "../components/MainContainer.tsx";
-import { PathMatches } from "../components/Navbar.tsx";
 import { WorkCard } from "../components/WorkCard.tsx";
+import { PathMatches } from "../routes.ts";
 
 export default function Work() {
   return (

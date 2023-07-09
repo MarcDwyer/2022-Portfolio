@@ -34,8 +34,10 @@ export class GeneralDBActions<T> {
     return value;
   }
 
-  saveEntry<J>(data: J, additionalKeys?: AdditionalKeys) {
-    return this.db.set(this.mergeKeys(additionalKeys), data);
+  async saveEntry<J>(data: J, additionalKeys?: AdditionalKeys) {
+    await this.db.set(this.mergeKeys(additionalKeys), data);
+
+    return data;
   }
   deleteEntry(additionalKeys?: AdditionalKeys) {
     return this.db.delete(this.mergeKeys(additionalKeys));

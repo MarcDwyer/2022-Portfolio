@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38959541-3a86-4fa8-b5be-271cbacf0efd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-actions/blog-actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-actions/general-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db-actions/general-actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-actions/review-actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-actions/thread-actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deno.lock" beforeDir="false" afterPath="$PROJECT_DIR$/deno.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fresh.gen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fresh.gen.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/islands/AddComment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/islands/AddComment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/islands/Comments.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/islands/CreateThreadForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/islands/Snake.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/thread/add-comment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/thread/save.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/games/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/games/snake.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/reviews.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/thread/[id].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/thread/create.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/thread/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/work.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/routes/work.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2SJG5ZUz7NikvyWOUV3GgwITrA3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/marcdwyer/Documents/github/2022-Portfolio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/marcdwyer/.nvm/versions/node/v20.4.0/lib/node_modules/prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38959541-3a86-4fa8-b5be-271cbacf0efd" name="Changes" comment="" />
+      <created>1688857087557</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688857087557</updated>
+      <workItem from="1688857089333" duration="630000" />
+      <workItem from="1688866812956" duration="397000" />
+      <workItem from="1688867229461" duration="6689000" />
+      <workItem from="1688874384099" duration="36000" />
+      <workItem from="1688874567448" duration="638000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

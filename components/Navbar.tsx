@@ -1,45 +1,18 @@
-import { Links } from "../appData/links.ts";
 import { GithubLink } from "./GithubLink.tsx";
 import { LinkedInLink } from "./LinkedInLink.tsx";
+import { PathMatches, Routes } from "../routes.ts";
+import { Links } from "../appData/links.ts";
 
 type Props = {
   path: string;
   match: keyof typeof PathMatches;
 };
 
-export enum PathMatches {
-  Games = "Games",
-  Home = "Home",
-  Work = "Work",
-  Blog = "Blog",
-  Projects = "Projects",
-  Thread = "Thread",
-  Reviews = "Reviews",
-}
-
 export default function Navbar({ match }: Props) {
-  const links = [
-    {
-      label: "Home",
-      to: "/",
-      match: PathMatches.Home,
-    },
-    {
-      label: "Projects",
-      to: "/projects",
-      match: PathMatches.Projects,
-    },
-    {
-      label: "Work",
-      to: "/work",
-      match: PathMatches.Work,
-    },
-  ];
-
   return (
     <nav className={`w-full flex bg-nav h-20`}>
       <div className="flex flex-nowrap mt-auto mb-auto ml-auto flex">
-        {links.map((link) => {
+        {Routes.map((link) => {
           const opacity = link.match === match ? "opacity-100" : "opacity-75";
           return (
             <a

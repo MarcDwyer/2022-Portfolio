@@ -1,5 +1,5 @@
 import { MainContainer } from "../components/MainContainer.tsx";
-import { PathMatches } from "../components/Navbar.tsx";
+import { PathMatches } from "../routes.ts";
 
 export default function Home() {
   return (

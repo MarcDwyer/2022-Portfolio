@@ -1,30 +1,32 @@
 import { useState } from "preact/hooks";
 import { JSX } from "preact/jsx-runtime";
-import { AddCommentBody } from "../routes/api/thread/add-comment.ts";
-import { Comment } from "../db-actions/thread-actions.ts";
+import {
+  Comment,
+  PostCommentPayload,
+} from "../../db-actions/comment-actions.ts";
 
 type Props = {
-  threadUUID: string;
-  setComments: (comments: Comment[]) => void;
+  handleSuccess: (newComment: Comment) => void;
 };
-export default function AddComment({ threadUUID, setComments }: Props) {
+export default function AddComment({ handleSuccess }: Props) {
   const [commentText, setCommentText] = useState("");
+  const [author, setAuthor] = useState("");
 
   async function handleSubmit(e: JSX.TargetedEvent<HTMLFormElement, Event>) {
     e.preventDefault();
     try {
-      const body: AddCommentBody = {
-        threadUUID,
-        commentText,
+      if (!commentText.length) throw new Error("No message provided");
+      const postComment: PostCommentPayload = {
+        message: commentText,
+        author,
       };
-      const commentsResp = await fetch("/api/thread/add-comment", {
-        body: JSON.stringify(body),
+      const commentResp = await fetch("/api/comments/post", {
         method: "POST",
+        body: JSON.stringify(postComment),
       });
-      const updatedComments = (await commentsResp.json()) as Comment[];
-      console.log({ updatedComments });
-      setComments(updatedComments);
+      const newComment = await commentResp.json();
       setCommentText("");
+      handleSuccess(newComment);
     } catch (e) {
       console.error(e);
     }
@@ -34,20 +36,21 @@ export default function AddComment({ threadUUID, setComments }: Props) {
       onSubmit={handleSubmit}
       class="md:flex md:items-center mb-6 flex flex-col"
     >
-      <div class="md:w-1/3 flex mr-auto">
-        <label
-          class="block font-bold md:text-right mb-1 md:mb-0 pr-4 mr-auto"
-          for="inline-full-name"
-        >
-          Add a Comment
-        </label>
-      </div>
+      <div class="md:w-1/3 flex mr-auto"></div>
       <div class="w-full">
         <textarea
           class="mt-2 mb-2 w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
           type="text"
           onChange={(e) => setCommentText((e.target as HTMLInputElement).value)}
           value={commentText}
+          placeholder="What would you like to say?"
+        />
+        <input
+          class="mt-2 mb-2 w-full bg-gray-200 appearance-none border-2 border-gray-200 rounded w-2/4 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          placeholder="Would you like to provide your name?"
+          value={author}
+          //@ts-ignore
+          onChange={(e) => setAuthor(e.target.value)}
         />
       </div>
       <div class="w-full flex">

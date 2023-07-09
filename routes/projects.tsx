@@ -1,8 +1,8 @@
 import ProjectData from "../appData/projectData.ts";
 import { MainContainer } from "../components/MainContainer.tsx";
-import { PathMatches } from "../components/Navbar.tsx";
 import ProjectCard from "../components/ProjectCard.tsx";
 import { Skills } from "../components/Skills.tsx";
+import { PathMatches } from "../routes.ts";
 
 export default function Projects() {
   return (
